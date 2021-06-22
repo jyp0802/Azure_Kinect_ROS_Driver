@@ -1,0 +1,4 @@
+https://thomasweng.com/azure_kinect_1604/
+https://thomasweng.com/azure_kinect_1604_ros/
+
+cp src/Azure_Kinect_ROS_Driver/REMEMBER/lib* devel/lib/

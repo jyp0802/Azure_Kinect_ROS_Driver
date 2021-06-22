@@ -117,11 +117,14 @@ class K4AROSDevice
     volatile bool running_;
 
     // Last capture timestamp for synchronizing playback capture and imu thread
-    std::atomic_int64_t last_capture_time_usec_;
+    // std::atomic_int64_t last_capture_time_usec_;
+    std::atomic<int64_t> last_capture_time_usec_;
 
     // Last imu timestamp for synchronizing playback capture and imu thread
-    std::atomic_uint64_t last_imu_time_usec_;
-    std::atomic_bool imu_stream_end_of_file_;
+    // std::atomic_uint64_t last_imu_time_usec_;
+    // std::atomic_bool imu_stream_end_of_file_;
+    std::atomic<uint64_t> last_imu_time_usec_;
+    std::atomic<bool> imu_stream_end_of_file_;
 
     // Threads
     std::thread frame_publisher_thread_;
